@@ -57,20 +57,20 @@ int main(int argc, char** argv)
 
 	//Print of answer for linear equation
 	if (roots[2]==0){
-		printf ("root ofthe equation     %fx + %f = 0     is: ",b,c);
+		printf ("root of the equation     %fx + %f = 0     is: ",b,c);
 		printf ("\n\t%f",roots[0]);
 	}
 
 	//Print of answer for quadratic equation with real roots;
 	if (roots[2]==1.0){
-		printf ("root ofthe equation     %fx^2 + %fx + %f =0     are: ",a,b,c);
+		printf ("roots of the equation     %fx^2 + %fx + %f =0     are: ",a,b,c);
 		printf ("\n\t%f",roots[0]);
 		printf ("\n\t%f",roots[1]);
 	}
 
 	//Print of answer for quadratic equation with imaginary roots;
 	if (roots[2]==2.0){
-		printf ("root ofthe equation     %fx^2 + %fx + %f = 0     are: ",a,b,c);
+		printf ("roots of the equation     %fx^2 + %fx + %f = 0     are: ",a,b,c);
 		printf ("\n\t%f + %f(i)",roots[0],roots[1]);
 		printf ("\n\t%f - %f(i)",roots[0],roots[1]);
 	}

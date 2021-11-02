@@ -70,9 +70,9 @@ int main(int argc, char** argv)
 	double true_sin= sin(x); //true value of sin for comparrison
 	double true_cos= cos(x); //true value of cos for comparrison
 
-	printf("\n\n\nexapnsion of sin(%lf)  : %lf",x,expans_sin);
-	printf("\ntrue value of sin(%lf) : %lf\n",x,true_sin);
-	printf("\nexapnsion of cos(%lf)  : %lf",x,expans_cos);
-	printf("\ntrue value of cos(%lf) : %lf\n\n\n",x,true_cos);
+	printf("\n\n\nexpansion of sin(%lf) at %i terms  : %lf",x,n,expans_sin);
+	printf("\nactual value of sin(%lf) function : %lf\n",x,true_sin);
+	printf("\nexpansion of cos(%lf) at %i terms  : %lf",x,expans_cos);
+	printf("\nactual value of cos(%lf) function : %lf\n\n\n",x,n,true_cos);
 	return 0;
 }
