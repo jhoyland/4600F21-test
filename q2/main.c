@@ -34,7 +34,7 @@ float Expansion(int type, double x, int n)
 			 if (alt == 0)
 			 {
 			 	sin += -(pow(x,i)/f);
-			 	printf("%f\n\n",sin);
+			 	printf("sin = %f\n\n",sin);
 			 	alt = 1;
 			 	//printf("Altcheck = %d \n\n",alt);
 			 }
@@ -49,6 +49,7 @@ float Expansion(int type, double x, int n)
 
 		return sin;
 	}
+	//else type 2 for cos (or mistype)
 	else
 	{	
 		for(i=1; i < n; i++)
