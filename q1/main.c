@@ -12,6 +12,17 @@ you may have your function in the main.c file or create and link a separate file
 
 */
 
+
+/*
+JAMES: Generally good job. However, your solution of sending status information in the
+output array is not elegant. Mixing the returned data with the status in this way makes
+the interface to the function not very intuitive for someone trying to use your function
+A better way would have been to keep output for just the root values and have your
+function return an integer to say what kind of root it found - e.g. 0 for linear
+1 for real, 2  for complex.
+
+*/
+
 void findRoots(double A, double B, double C, double* output)
 {
 	double root1 = 0.0, root1C = 0.0, root2 = 0.0, root2C = 0.0;
@@ -27,7 +38,7 @@ void findRoots(double A, double B, double C, double* output)
 		{
 			output[4] = 1.0;
 			double num1 = (-B) / (2 * A);
-			double num2 = -1 * (B*B - 4*A*C);
+			double num2 = -1 * (B*B - 4*A*C); // JAMES: You can just write -(B*B etc.. no need for the -1*
 
 			root1 = (-B) / (2 * A);
 			output[0] = root1;
@@ -59,7 +70,7 @@ void findRoots(double A, double B, double C, double* output)
 		output[5] = 1.0;
 		root1 = -C/B;
 		output[0] = root1;
-	}	
+	}
 }
 
 int main(int argc, char** argv)
@@ -93,4 +104,3 @@ int main(int argc, char** argv)
 
   return 0;
 }
-
