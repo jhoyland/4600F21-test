@@ -12,6 +12,14 @@ you may have your function in the main.c file or create and link a separate file
 #include <stdio.h>
 #include <math.h>
 
+// JAMES: Good, would have liked a few more comments in the code.
+// I am assuming x[2] is being used to return status information,
+// e.g. if the root is real of complex. In which case it should be
+// set to some meaningful value in each case not just for complex,
+// However, since the function currently returns void, a better way
+// would be to return this information in the retun statement and
+// change it to int.
+
 void findRoots(double A, double B, double C, double *x)
 {
 
