@@ -8,6 +8,9 @@ write a main function to use your function to find the roots of several polynomi
 you may have your function in the main.c file or create and link a separate file as you wish
 
 */
+// ******************  MARK  7/10
+
+
 #include <stdio.h>
 #include <stdlib.h>
 #include <math.h>

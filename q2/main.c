@@ -4,6 +4,9 @@ QUESTION 2:
 
 	write a function which will calculate the sin or cos using the series expansion. The user of the function should be able to specify the the number of terms to calculate.
 */
+
+// *******************  MARK 10/10
+
 #include <stdio.h>
 #include <stdlib.h>
 #include <math.h>
