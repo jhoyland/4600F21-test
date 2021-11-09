@@ -19,7 +19,7 @@ int main(int argc, char** argv)
 	double A = 1.0;
 	double B = 2.0;
 	double C = 0.0; //x = 0, x = -2
-	double roots[2]; 
+	double roots[2];
 
 	quadratic(A, B, C, roots);
 
@@ -50,7 +50,7 @@ void quadratic(double A, double B, double C, double *roots)
 			if(i==1)
 			{
 				roots[i] = (-B - sqrt(determinant))/2.0/A;
-				
+
 			}
 		}
 	}
@@ -61,6 +61,11 @@ void quadratic(double A, double B, double C, double *roots)
 			roots[i] = -B/2.0/A;
 		}
 	}
+
+	// JAMES: To return the complex solution you must return both
+	// real and imaginary parts separately.
+
+	// JAMES: Also needed the linear solution if A = 0
 
 	if(determinant < 0) //complex solution, put in i
 	{

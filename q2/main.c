@@ -35,6 +35,8 @@ double seriesExpansion(double x, int nterms, int mode) //number of terms. mode 0
 		//when nterms is even, num of positive and negative terms are same.
 		//when nterms is odd,  num of positive is one more than negative.
 		//sinx
+
+		// JAMES: Nice solution!
 		for(j=1; j<nterms*2; j=j+4) // (x^1), -x^3, (x^5), -x^7
 		{
 			fact = factorial(j);
