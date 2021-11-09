@@ -7,6 +7,10 @@ QUESTION 2:
 	 able to specify the the number of terms to calculate.
 */
 
+// ****************** MARK: 8/10
+
+
+
 #include <stdlib.h>
 #include <stdio.h>
 #include <math.h>
