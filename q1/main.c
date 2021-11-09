@@ -13,14 +13,18 @@ you may have your function in the main.c file or create and link a separate file
 #include<stdlib.h>
 #include<math.h>
 
+/*JAMES: Good generally it's prefeable though to keep the printf statements
+out of the function. It allows the function to be used in a wider variety of
+contexts.*/
+
 double Root(double* X, double A, double B, double C)
 {
 	double x1, x2, x;
 	double imgcheck;
 	double img1, img2;
-	//solve for simplest case first if possible
+	//solve for simplest case first if possible  JAMES: Good!
 	if(A == 0)
-	{	
+	{
 		x = -(C/B);
 		printf("\nThe root of the quadratic is %5.2f \n",x);
 		printf("There is no secondary root.\n");
@@ -55,6 +59,13 @@ double Root(double* X, double A, double B, double C)
 			X[2] = x2;
 			X[3] = img2;
 
+			/*
+			JAMES: Good, the only change I might have made is to have the real parts x1,x2 be at the same
+			location in the 'X' array whether returning real or complex - so X[0] = x1 and X[2] = x2
+			with then X[1] and X[3] both equalling zero for the real root case. It keeps it more consistent
+			between cases.
+			*/
+
 			return 0;
 		}
 	}
@@ -63,14 +74,14 @@ double Root(double* X, double A, double B, double C)
 
 int main(int argc, char** argv)
 {
-	//test the function 
-	//first, test simplest case: 
+	//test the function
+	//first, test simplest case:
 	double A = 0.0;
 	double B = 2.0;
 	double C = 4.0;
 	printf("The quadratic equation is %5.2fx^2 + %5.2fx + %5.2f",A,B,C);
-	double X[20];
-	// the function already does the printing for me. 
+	double X[20];  // JAMES: Is there a reason you made it 20? - your function only uses 4 elements.
+	// the function already does the printing for me.
 	Root(X,A,B,C);
 	printf("The function returns %5.2f \n\n",X[0]);
 
