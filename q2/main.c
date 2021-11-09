@@ -10,6 +10,9 @@ QUESTION 2:
 	the number of terms to calculate.
 */
 
+
+// ******************* MARK: 10/10
+
 /*JAMES: Good job!*/
 
 
