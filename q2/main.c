@@ -37,7 +37,7 @@ double trig_taylor(double x, int n, int trig_function)
 	for(int i=1;i<n;i++)
 	{
 		m += 2;
-		t *= - x * x / (m * (m-1));
+		t *= - x * x / (m * (m-1)); // Calculate the new term from the old one
 		r += t;
 
 	}
