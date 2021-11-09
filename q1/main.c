@@ -9,13 +9,16 @@ you may have your function in the main.c file or create and link a separate file
 
 */
 
+// JAMES:  Good work!
+
+
 #include <stdio.h>
 #include <stdlib.h>
 #include <math.h>
 
 // Function that
 void roots_func(float a, float b, float c, float * roots){
-	
+
 	//Case when coefficients make a linear function
 	if (a==0) {
 		roots[0]=-c/b;
@@ -52,7 +55,7 @@ int main(int argc, char** argv)
 	//Array that will store the type of answer and appropriate roots
 	float roots[3];
 
-	//Calling function to perform necessary calculations 
+	//Calling function to perform necessary calculations
 	roots_func(a,b,c,roots);
 
 	//Print of answer for linear equation

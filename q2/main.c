@@ -9,6 +9,11 @@ QUESTION 2:
 #include <stdlib.h>
 #include <math.h>
 
+// JAMES: Good work! The only improvement I could suggest:
+// Think about how each term could be calculatd from the previous one - this will
+// save some time in calculating the factorial
+
+
 //calcualtes factorial of a given number
 double fact(int i){
 	double j=2.0; // smallest value that can be given to this function is 2 (1st term in cos expansion)
@@ -20,7 +25,7 @@ double fact(int i){
 	return(value);
 }
 
-//calculates individual terms of the expansion starting with 1st (0th already known) 
+//calculates individual terms of the expansion starting with 1st (0th already known)
 double term(float x, int i){
 	double numer=pow(x,i); //raises x to power
 	double denom=fact(i); // calss and stores result of factorial function
@@ -62,17 +67,17 @@ double cos_expansion(double x, int n){
 int main(int argc, char** argv)
 {
 
-	double x=12.0; // value of x to for sin & cos
+	double x=10.0; // value of x to for sin & cos
 	int n=30; //number of terms in the expansion
 
 	double expans_sin= sin_expansion(x,n); //calling and storing the expansion of sin at n terms for given x
-	float expans_cos= cos_expansion(x,n); //calling and storing the expansion of cos at n terms for given x
+	double expans_cos= cos_expansion(x,n); //calling and storing the expansion of cos at n terms for given x
 	double true_sin= sin(x); //true value of sin for comparrison
 	double true_cos= cos(x); //true value of cos for comparrison
 
 	printf("\n\n\nexpansion of sin(%lf) at %i terms  : %lf",x,n,expans_sin);
 	printf("\nactual value of sin(%lf) function : %lf\n",x,true_sin);
-	printf("\nexpansion of cos(%lf) at %i terms  : %lf",x,expans_cos);
-	printf("\nactual value of cos(%lf) function : %lf\n\n\n",x,n,true_cos);
+	printf("\nexpansion of cos(%lf) at %i terms  : %lf",x,n,expans_cos);
+	printf("\nactual value of cos(%lf) function : %lf\n\n\n",x,true_cos);
 	return 0;
 }
